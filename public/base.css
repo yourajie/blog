@@ -1,7 +1,5 @@
-
-body,header,footer 
-{
-    background-color: red;
+nav{
+    position: sticky;
+    top: 0;
+    width: 100%;
 }
-
-
