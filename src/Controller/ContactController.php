@@ -12,7 +12,7 @@ class ContactController extends AbstractController
     /**
      * @Route("/contact/{city}", name="contactCity")
      */
-    public function contactcity(Request $request, string $city): Response
+    public function contactcity(Request $request, string $city = ""): Response
     {
 
         return $this->render('contact/index.html.twig',[
