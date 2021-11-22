@@ -22,6 +22,11 @@ class Contact
      */
     private $Name;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $firstname;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -35,6 +40,18 @@ class Contact
     public function setName(string $Name): self
     {
         $this->Name = $Name;
+
+        return $this;
+    }
+
+    public function getFirstname(): ?string
+    {
+        return $this->firstname;
+    }
+
+    public function setFirstname(string $firstname): self
+    {
+        $this->firstname = $firstname;
 
         return $this;
     }

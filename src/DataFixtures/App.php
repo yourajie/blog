@@ -2,19 +2,16 @@
 
 namespace App\DataFixtures;
 
-use App\Entity\Contact;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 
-class AppFixtures extends Fixture
+class App extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
-        $contact = new Contact();
-        $contact->setName('soyer');
-        $contact->setFirstname('Beaugosse');
-        
-        $manager->persist($contact);
+        // $product = new Product();
+        // $manager->persist($product);
+
         $manager->flush();
     }
 }
