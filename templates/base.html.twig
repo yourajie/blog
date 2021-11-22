@@ -2,21 +2,31 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link href="{{ asset('base.css') }}" rel="stylesheet"/>
+        <link href="{{ asset('nav_fot.css') }}" rel="stylesheet"/>
         <title>{% block title %}Welcome!{% endblock %}</title>
+
         {% block stylesheets %}
         {% endblock %}
 
         {% block javascripts %}
         {% endblock %}
         </head>
+    <header>
+        {% block header %}
+            
+            <nav>
+                <ul>
+                    <li class="logo"><img src="{{ asset('img/logo.png') }}" alt="Symfony!" height="80" width="80"></a></li>
+                    <li><a class="link" href={{path("accueil")}}>Accueil</a></li>
+                    <li><a class="link" href={{path("blog")}}>Blog</a></li>
+                    <li><a class="link" href={{path("shop")}}>shop</a></li>
+                    <li><a class="link" href={{path("contactCity",{city:"montpellier"})}}>Contact</a></li>
 
-        {% block head %}
-                <a href={{path("contactCity",{city:"montpellier"})}}>City</a>
-                <a href={{path("accueil")}}>Accueil</a>
-                <a href={{path("shop")}}>shop</a>
-                <a href={{path("blog")}}>Blog</a>
+                </ul>
+            </nav>
+    
         {% endblock %}
+     </header>
     <body>
         {% block body %}{% endblock %}
     </body>
