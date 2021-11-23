@@ -19,8 +19,8 @@ class AppFixtures extends Fixture
         $manager->flush();
 
         $article = new Article();;
-        $article->setNom('Pk les arabe vole ?');
-        $article->SetContenu('Arabe');
+        $article->setNom('Tuto symfony');
+        $article->SetContenu('Synfony');
 
         $manager->persist($article);
         $manager->flush();
