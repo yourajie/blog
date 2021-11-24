@@ -27,6 +27,11 @@ class Article
      */
     private $Contenu;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $auteur;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -52,6 +57,18 @@ class Article
     public function setContenu(string $Contenu): self
     {
         $this->Contenu = $Contenu;
+
+        return $this;
+    }
+
+    public function getAuteur(): ?string
+    {
+        return $this->auteur;
+    }
+
+    public function setAuteur(?string $auteur): self
+    {
+        $this->auteur = $auteur;
 
         return $this;
     }
