@@ -14,15 +14,17 @@ class AppFixtures extends Fixture
         $contact = new Contact();
         $contact->setName('soyer');
         $contact->setFirstname('Beaugosse');
-
-        $manager->persist($contact);
-        $manager->flush();
+        $contact->setEmail('');
+        $contact->setTelephone('');
+        
 
         $article = new Article();;
         $article->setNom('Tuto symfony');
         $article->SetContenu('Synfony');
+        $article->SetAuteur('');
 
         $manager->persist($article);
+        $manager->persist($contact);
         $manager->flush();
     }
 }
