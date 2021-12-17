@@ -3,5 +3,12 @@
 {% block title %}Blog{% endblock %}
 
 {% block body %}
-<h1> Ceci est la page blog<h1>
+<h1> Ceci est la page blog avec ses articles<h1>
+
+            {% if form is defined %}
+                <h2>Ajouter un nouvelle article </h2>
+
+                {{ form(form) }}
+            {% endif %}
+
 {% endblock %}
